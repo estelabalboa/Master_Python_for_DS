@@ -2,7 +2,7 @@
 # Copyright 2009-2017 BHG http://bw.org/
 
 def main():
-    for i in inclusive_range(25):
+    for i in inclusive_range(5, 25, 5 ):
         print(i, end = ' ')
     print()
 
@@ -25,7 +25,7 @@ def inclusive_range(*args):
     # generator
     i = start
     while i <= stop:
-        yield i
+        yield i # yield is like return but for generator
         i += step
 
 if __name__ == '__main__': main()

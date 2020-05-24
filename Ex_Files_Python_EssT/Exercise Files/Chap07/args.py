@@ -2,7 +2,8 @@
 # Copyright 2009-2017 BHG http://bw.org/
 
 def main():
-    kitten('meow', 'grrr', 'purr')
+    x = ('meow', 'grrr', 'purr')
+    kitten(*x)
 
 def kitten(*args):
     if len(args):

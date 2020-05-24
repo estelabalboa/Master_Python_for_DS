@@ -3,7 +3,16 @@
 
 def main():
     seq = range(11)
+    seq_dob = [(x, x * 2) for x in seq]
     print_list(seq)
+    print_list(seq_dob)
+
+    from math import pi
+    pi_rounded = [round(pi, i) for i in seq]
+    print_list(pi_rounded)
+
+    seq_2 = {x: x**2 for x in seq}
+    print(seq_2)
 
 def print_list(o):
     for x in o: print(x, end = ' ')

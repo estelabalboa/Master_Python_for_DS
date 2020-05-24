@@ -3,6 +3,8 @@
 
 def main():
     game = [ 'Rock', 'Paper', 'Scissors', 'Lizard', 'Spock' ]
+    print(', '.join(game))
+    game.pop(1)
     print_list(game)
 
 def print_list(o):

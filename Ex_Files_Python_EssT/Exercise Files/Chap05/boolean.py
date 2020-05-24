@@ -10,3 +10,8 @@ if a and b:
     print('expression is true')
 else:
     print('expression is false')
+
+if y is x[0]:
+    print('expression is true')
+else:
+    print('expression is false')
