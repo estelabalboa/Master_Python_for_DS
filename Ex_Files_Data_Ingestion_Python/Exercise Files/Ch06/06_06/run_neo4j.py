@@ -87,4 +87,4 @@ try:
     proc.wait()
 except KeyboardInterrupt:
     pass
-print('\nkthxbai ☺')
+print('\nbalboae ☺')

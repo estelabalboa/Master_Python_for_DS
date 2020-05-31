@@ -1,4 +1,6 @@
 """Finding outliers manually"""
+'''Outliers detection with sklearn'''
+
 import sqlite3
 
 import pandas as pd
