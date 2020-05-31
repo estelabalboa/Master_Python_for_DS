@@ -35,7 +35,7 @@ def iter_rides(file_name):
 if __name__ == '__main__':
     from pprint import pprint
 
-    for n, ride in enumerate(iter_rides('taxi.log.bz2')):
+    for n, ride in enumerate(iter_rides('Ex_Files_Data_Ingestion_Python/Exercise Files/Ch02/02_04/taxi.log.bz2')):
         if n > 5:
             break
         pprint(ride)

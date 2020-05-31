@@ -31,7 +31,7 @@ class numwords():
     _oor = 'OOR'    # Out Of Range
 
     def __init__(self, n):
-        self._number = n;
+        self._number = n
 
     def numwords(self, num = None):
         'Return the number as words'
@@ -62,7 +62,7 @@ class numwords():
         'setter/getter'
         if n is not None:
             self._number = n
-        return str(self._number);
+        return str(self._number)
 
 class saytime(numwords):
     '''

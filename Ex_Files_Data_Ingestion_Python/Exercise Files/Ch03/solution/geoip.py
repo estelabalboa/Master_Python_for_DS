@@ -32,7 +32,8 @@ def find_zinfo(zf: ZipFile, name):
 
 def load_db():
     here = Path(__file__).absolute().parent
-    csv_file = here / 'GeoLite2-Country-CSV.zip'
+    # Try https://web.archive.org/web/20191227183011if_/https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country-CSV.zip
+    csv_file = here / 'GeoLite2-Country-CSV_20191224.zip'
     with ZipFile(csv_file) as zf:
         zinfo = find_zinfo(zf, countries_csv)
         assert zinfo, f'cannot find {countries_csv}'
@@ -68,6 +69,7 @@ class Handler(BaseHTTPRequestHandler):
             return
 
         auth = self.headers.get('X-GEOIP-TOKEN')
+        auth = 'l3tm3in'
         if auth != 'l3tm3in':
             self.send_error(HTTPStatus.UNAUTHORIZED)
             return

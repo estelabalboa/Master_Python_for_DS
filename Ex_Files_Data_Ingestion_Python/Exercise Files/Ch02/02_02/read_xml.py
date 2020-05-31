@@ -37,6 +37,6 @@ def load_xml(file_name):
 
 # Example
 if __name__ == '__main__':
-    df = load_xml('taxi.xml.bz2')
+    df = load_xml('Ex_Files_Data_Ingestion_Python/Exercise Files/Ch02/02_02/taxi.xml.bz2')
     print(df.dtypes)
     print(df.head())

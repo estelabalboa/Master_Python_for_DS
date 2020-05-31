@@ -5,7 +5,10 @@
 # 1.2.0 - 2017-09-27 -
 #   lots of cleanup. uses f-strings so requires Python 3.6
 
+# DATABASE INTERFACE 
+
 import sqlite3
+import os
 
 __version__ = '1.2.0'
 
@@ -198,15 +201,16 @@ def test():
     recs = [
         dict(string='one', number=42),
         dict(string='two', number=73),
-        dict(string='three', number=123)
+        dict(string='three', number=123),
+        dict(string='four', number=1223)
     ]
 
     # -- for file-based database
     # try: os.stat(fn)
     # except: pass
     # else: 
-    #     print('Delete', fn)
-    #     os.unlink(fn)
+    #      print('Delete', fn)
+    #      os.unlink(fn)
 
     print('bwDB version', __version__)
 
@@ -245,7 +249,7 @@ def test():
     for r in db.getrecs():
         print(dict(r))
     for r in db.sql_query(f"select * from {t}"):
-        print(r)
+        print(tuple(r))
     db.close()
 
 

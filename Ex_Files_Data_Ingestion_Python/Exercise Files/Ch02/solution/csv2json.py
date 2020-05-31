@@ -40,7 +40,7 @@ def encode_time(obj):
     return obj.isoformat()
 
 
-with open('taxi.jl', 'w') as out:
-    for record in iter_records('taxi.csv.bz2'):
+with open('taxiCsv2Json.jl', 'w') as out:
+    for record in iter_records('Ex_Files_Data_Ingestion_Python/Exercise Files/Ch02/solution/taxi.csv.bz2'):
         data = json.dumps(record, default=encode_time)
         out.write(f'{data}\n')

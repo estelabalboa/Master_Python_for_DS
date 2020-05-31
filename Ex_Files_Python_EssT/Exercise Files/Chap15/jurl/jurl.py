@@ -14,7 +14,7 @@ import random
 import os, sys
 
 g = dict(
-    config_file = 'db.conf',
+    config_file = 'Ex_Files_Python_EssT/Exercise Files/Chap15/jurl/db.conf',
     table_name = 'jurl'
 )
 
@@ -37,7 +37,7 @@ def main():
 
     if key.startswith('/'): key = key[1:]
     try:
-        target = db.sql_query_value("SELECT targetURL FROM jurl WHERE shortURL = ?", [ key ]);
+        target = db.sql_query_value("SELECT targetURL FROM jurl WHERE shortURL = ?", [ key ])
     except TypeError as e:
         redirect(default_url)
     else:

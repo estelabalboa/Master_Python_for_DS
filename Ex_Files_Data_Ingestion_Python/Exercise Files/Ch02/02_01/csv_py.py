@@ -36,7 +36,7 @@ def iter_records(file_name):
 def example():
     from pprint import pprint
 
-    for i, record in enumerate(iter_records('taxi.csv.bz2')):
+    for i, record in enumerate(iter_records('Ex_Files_Data_Ingestion_Python/Exercise Files/Ch02/02_01/taxi.csv.bz2')):
         if i >= 10:
             break
         pprint(record)

@@ -53,7 +53,8 @@ if __name__ == '__main__':
     from collections import Counter
 
     countries = Counter()
-    ips = iter_ips('NASA_access_log_Aug95.gz', 1000)
+    ips = iter_ips('/Users/ebalboa/Desktop/linkedin_learning/Master_Python_for_DS/NASA_access_log_Aug95.gz', 1000)
+    print(ips)
     for ip in ips:
         country = country_of(ip)
         if not country:
