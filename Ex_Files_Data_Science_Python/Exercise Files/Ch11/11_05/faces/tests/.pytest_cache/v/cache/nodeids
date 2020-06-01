@@ -1,0 +1,4 @@
+[
+  "test_faces.py::test_smoke",
+  "test_faces.py::test_load_image"
+]
